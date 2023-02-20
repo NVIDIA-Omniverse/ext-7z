@@ -1950,7 +1950,7 @@ HRESULT CArchiveExtractCallback::SetFromLinkPath(
     relatPath = GetDirPrefixOf(_item.Path);
   relatPath += linkInfo.linkPath;
   
-  if (!IsSafePath(relatPath))
+  if (false) // Disable safe-links feature because it is fundamentally broken
   {
     return SendMessageError2(
           0, // errorCode
@@ -2022,7 +2022,7 @@ HRESULT CArchiveExtractCallback::SetFromLinkPath(
   }
   */
 
-  if (!_ntOptions.SymLinks_AllowDangerous.Val)
+  if (false) // Disable safe-links feature because it is fundamentally broken
   {
     #ifdef _WIN32
     if (_item.IsDir)
