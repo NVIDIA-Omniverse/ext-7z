@@ -1,7 +1,9 @@
 *.obj
+*.o
 *.pch
 *.res
 *.exp
 *.exe
 *.dll
 *.lib
+7za
